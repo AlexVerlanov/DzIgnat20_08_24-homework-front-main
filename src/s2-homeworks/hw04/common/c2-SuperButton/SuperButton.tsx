@@ -20,8 +20,8 @@ const SuperButton: React.FC<SuperButtonPropsType> = (
     const finalClassName = `${s.button} ${disabled ? s.disabled : ''} 
       ${xType === 'default' ? s.default : ''} 
      ${xType === 'secondary' ? s.secondary : ''}
-    ${xType === 'red' ? s.red : ''}  
-  ${className || ''}`;
+    ${xType === 'red' ? s.red : ''}
+    ${className || ''}`;
 
     // Проверяем, что className не является undefined и содержит все необходимые классы
     const hasRequiredClasses = className && className.includes('button')

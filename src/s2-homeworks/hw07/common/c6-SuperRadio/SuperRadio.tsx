@@ -41,8 +41,8 @@ const SuperRadio: React.FC<SuperRadioPropsType> = ({
                                                        ...restProps
                                                    }) => {
     const onChangeCallback = (e: ChangeEvent<HTMLInputElement>) => {
-        let selectedOption = options?.find(o => o.id === Number(e.currentTarget.value))
-        if (selectedOption && onChangeOption) {
+      let selectedOption = options?.find(o=> o.id ===Number(e.currentTarget.value))
+        if(selectedOption && onChangeOption){
             onChangeOption(selectedOption)
         }
     }

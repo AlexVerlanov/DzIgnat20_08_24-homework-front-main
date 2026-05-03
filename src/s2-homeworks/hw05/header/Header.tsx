@@ -44,10 +44,32 @@ export const Header: FC<PropsType> = ({ handleOpen, handleClose }) => {
             />
             <nav
                 className={`${s.links} ${isLinksVisible ? s.visible : ''}`}
-                onMouseEnter={handleMouseEnter} // Показать ссылки при наведении
-                onMouseLeave={handleMouseLeave} // Скрыть ссылки, когда курсор уходит
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
             >
+                <NavLink
+                    id="hw5-pre-junior-link"
+                    to={PATH.PRE_JUNIOR}
+                    onClick={handleClose}
+                >
+                    PreJunior
+                </NavLink>
 
+                <NavLink
+                    id="hw5-junior-link"
+                    to={PATH.JUNIOR}
+                    onClick={handleClose}
+                >
+                    Junior
+                </NavLink>
+
+                <NavLink
+                    id="hw5-junior-plus-link"
+                    to={PATH.JUNIOR_PLUS}
+                    onClick={handleClose}
+                >
+                    Junior+
+                </NavLink>
             </nav>
             <h1>{pageName}</h1>
         </div>

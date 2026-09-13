@@ -15,10 +15,11 @@ import {useDispatch, useSelector} from "react-redux";
 * */
 
 const HW10 = () => {
-    // useSelector, useDispatch // пишет студент
-    const dispatch = useDispatch();
-    const isLoading = useSelector((state:AppStoreType) => state.loading.isLoading)
-    /*const isLoading = false*/
+    const dispatch = useDispatch()
+
+    const isLoading = useSelector(
+        (state: AppStoreType) => state.loading.isLoading
+    )
 
     const setLoading = () => {
         dispatch(loadingAC(true))

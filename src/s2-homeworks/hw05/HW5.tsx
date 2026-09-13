@@ -3,6 +3,8 @@ import { HashRouter } from 'react-router-dom'
 import { Layout } from './layout/Layout'
 import Pages from './Pages'
 import s from './HW5.module.css'
+import {Provider} from "react-redux";
+import store from "../hw10/bll/store";
 
 /*
 * 1 - в файле Pages.tsx дописать роуты на все страницы
@@ -13,12 +15,12 @@ import s from './HW5.module.css'
 function HW5() {
     return (
         <div className={s.H5}>
-        <HashRouter>
-            {/*в gh-pages лучше работает HashRouter, с BrowserRouter скорее всего не пройдёт тест*/}
-            <Layout>
-
-            </Layout>
-        </HashRouter>
+            <Provider store={store}>
+                <HashRouter>
+                    <Layout>
+                    </Layout>
+                </HashRouter>
+            </Provider>
         </div>
     )
 }
